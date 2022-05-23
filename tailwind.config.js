@@ -1,5 +1,6 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 const plugin = require("tailwindcss/plugin");
+const colors = require("tailwindcss/colors");
 const Color = require("color");
 
 module.exports = {
@@ -13,9 +14,7 @@ module.exports = {
 
     theme: {
         colors: {
-            transparent: "transparent",
-            white: "#ffffff",
-            black: "#000000",
+            ...colors,
             gray: {
                 50: "#f9fafb",
                 100: "#f4f5f7",
@@ -172,7 +171,9 @@ module.exports = {
         plugin(({ addUtilities, e, theme, variants }) => {
             const newUtilities = {};
 
-            Object.entries(theme("colors")).map(([name, value]) => {
+            const { inherit, ...colors } = theme("colors");
+
+            Object.entries(colors).map(([name, value]) => {
                 if (name === "transparent" || name === "current") return;
                 const color = value[300] ? value[300] : value;
                 const hsla = Color(color).alpha(0.45).hsl().string();
