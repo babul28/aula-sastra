@@ -25,8 +25,7 @@
             News
         </x-admin.nav-link>
 
-        <x-admin.nav-link {{-- href="{{ route('admin.artworks') }}" :isActive="request()->routeIs('admin.artworks')"
-            --}} href="#">
+        <x-admin.nav-link href="{{ route('admin.artworks.index') }}" :isActive="request()->routeIs('admin.artworks.*')">
             <x-slot name="icon">
                 <x-icons.sparkles class="h-5 w-5" />
             </x-slot>
