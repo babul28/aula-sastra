@@ -89,10 +89,17 @@
         </li> --}}
     </ul>
     <div class="px-6 my-6">
-        <button
+        <a href="{{ route('admin.artworks.create') }}"
             class="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
-            Create artwork
-            <span class="ml-2" aria-hidden="true">+</span>
-        </button>
+            Create Artwork
+            <span class="ml-2" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-current" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                        clip-rule="evenodd" />
+                </svg>
+            </span>
+        </a>
     </div>
 </div>
