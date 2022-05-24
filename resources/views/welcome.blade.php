@@ -39,7 +39,7 @@
                 </div>
 
                 <div>
-                    <a href=""
+                    <a href="{{ route('news.index') }}"
                         class="block p-1 w-32 h-32 rounded-xl font-semibold bg-gray-100 border border-gray-200 ring ring-gray-200 hover:shadow-2xl hover:shadow-cyan-100">
                         <img src="{{ asset('assets/undraw_newspaper.svg') }}" alt="" class="h-full w-full">
                     </a>

@@ -5,19 +5,19 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
-class ArtworkPostController extends Controller
+class NewsPostController extends Controller
 {
     public function index(Request $request)
     {
-        $artworks = Post::query()
+        $news = Post::query()
             ->with('featuredImage')
-            ->onlyArtworks()
+            ->onlyNews()
             ->onlyPublished()
             ->latest()
             ->paginate()
             ->withQueryString();
 
-        return view('artworks.index', compact('artworks'));
+        return view('news.index', compact('news'));
     }
 
     public function show(Request $request, Post $post)
