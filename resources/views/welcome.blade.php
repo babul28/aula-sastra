@@ -28,7 +28,7 @@
 
             <div class="flex flex-wrap items-center justify-center gap-8 xl:gap-12">
                 <div>
-                    <a href=""
+                    <a href="{{ route('about') }}"
                         class="block p-1 w-32 h-32 rounded-xl font-semibold bg-gray-100 border border-gray-200 ring ring-gray-200 hover:shadow-2xl hover:shadow-cyan-100">
                         <img src="{{ asset('assets/undraw_about_me.svg') }}" alt="" class="h-full w-full">
                     </a>
@@ -61,19 +61,18 @@
                 </div>
 
                 <div>
-                    <a href=""
+                    <a href="{{ route('submission') }}"
                         class="block p-1 w-32 h-32 rounded-xl font-semibold bg-gray-100 border border-gray-200 ring ring-gray-200 hover:shadow-2xl hover:shadow-cyan-100">
                         <img src="{{ asset('assets/undraw_online_articles.svg') }}" alt="" class="h-full w-full">
                     </a>
                     <p
                         class="mt-2 px-2 py-1 rounded bg-gray-50 bg-opacity-30 text-xs font-bold text-sky-800 tracking-wide text-center">
-                        Kirim
-                        Karya
+                        Kirim Karya
                     </p>
                 </div>
 
                 <div>
-                    <a href=""
+                    <a href="{{ route('community') }}"
                         class="block p-1 w-32 h-32 rounded-xl font-semibold bg-gray-100 border border-gray-200 ring ring-gray-200 hover:shadow-2xl hover:shadow-cyan-100">
                         <img src="{{ asset('assets/undraw_hey_email.svg') }}" alt="" class="h-full w-full">
                     </a>
