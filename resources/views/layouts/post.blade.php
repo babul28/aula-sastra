@@ -30,7 +30,7 @@
             <div class="relative z-10 max-w-7xl mx-auto py-8 flex justify-center items-center h-[19rem]">
                 <div class="absolute top-10 left-0">
                     <a href="{{ count(Request::segments()) === 1 ? route('home') : '/' . Request::segments()[0] }}"
-                        class="text-white">
+                        class="text-white flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 inline-block mr-2" fill="none"
                             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
