@@ -30,4 +30,14 @@ class PostStatusEnum
             'trashed' => self::TRASHED,
         ][$value] ?? 99 ;
     }
+
+    public static function isPublished(int $status): bool
+    {
+        return self::PUBLISHED === $status;
+    }
+
+    public static function isTrashed(int $status): bool
+    {
+        return self::TRASHED === $status;
+    }
 }

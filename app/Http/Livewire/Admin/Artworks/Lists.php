@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Admin\Artworks;
 
 use App\Enums\PostStatusEnum;
 use App\Models\Post;
+use App\Services\PostService;
 use Illuminate\Http\Request;
 use Livewire\Component;
 use Livewire\WithPagination;
@@ -32,6 +33,7 @@ class Lists extends Component
 
     protected $listeners = [
         'updatingFilters' => 'updateFilter',
+        'refreshArchiveList' => '$refresh',
     ];
 
     public function mount(Request $req): void
@@ -55,6 +57,24 @@ class Lists extends Component
                 ->when($this->status, fn ($q) => $q->where('status', PostStatusEnum::getValue($this->status)))
                 ->when($this->sort, fn ($q) => $this->sort === 'latest' ? $q->latest() : $q->oldest())
                 ->paginate();
+    }
+
+    public function publishArtwork(string $uuid)
+    {
+        $this->emit(
+            'openModal',
+            'admin.artworks.confirm-publish-artwork',
+            ['uuid' => $uuid]
+        );
+    }
+
+    public function deleteArtwork(string $uuid)
+    {
+        $this->emit(
+            'openModal',
+            'admin.artworks.confirm-archive-artwork',
+            ['uuid' => $uuid]
+        );
     }
 
     public function render()

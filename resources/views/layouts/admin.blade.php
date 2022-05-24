@@ -20,6 +20,8 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+
+    {{ $css ?? '' }}
 </head>
 
 <body>
@@ -37,6 +39,10 @@
             </main>
         </div>
     </div>
+
+    @livewire('livewire-ui-modal')
+
+    {{ $scripts ?? '' }}
 </body>
 
 </html>
