@@ -33,6 +33,7 @@ module.exports = {
 
     plugins: [
         require("@tailwindcss/forms"),
+        require("@tailwindcss/line-clamp"),
         plugin(({ addUtilities, e, theme, variants }) => {
             const newUtilities = {};
 

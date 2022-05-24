@@ -22,7 +22,7 @@
 <body>
     <div class="flex flex-col min-h-screen bg-gradient-to-r from-cyan-500 to-blue-500">
         <div class="flex-1 p-4 flex flex-col items-center justify-center">
-            <div class="mb-16">
+            <div class="mb-16 md:mb-24">
                 <a href="" class="text-5xl font-semibold text-gray-100 tracking-widest">Aula Sastra</a>
             </div>
 
@@ -50,7 +50,7 @@
                 </div>
 
                 <div>
-                    <a href=""
+                    <a href="{{ route('artworks.index') }}"
                         class="block p-1 w-32 h-32 rounded-xl font-semibold bg-gray-100 border border-gray-200 ring ring-gray-200 hover:shadow-2xl hover:shadow-cyan-100">
                         <img src="{{ asset('assets/undraw_online_art.svg') }}" alt="" class="h-full w-full">
                     </a>
@@ -83,7 +83,7 @@
                 </div>
             </div>
 
-            <div class="relative w-full max-w-xl focus-within:text-sky-500 mt-12">
+            <div class="relative w-full max-w-xl focus-within:text-sky-500 mt-16 md:mt-20">
                 <div class="absolute inset-y-0 flex items-center pl-2">
                     <svg class="w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd"
