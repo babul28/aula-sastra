@@ -17,8 +17,7 @@
             Dashboard
         </x-admin.nav-link>
 
-        <x-admin.nav-link {{-- href="{{ route('admin.news') }}" :isActive="request()->routeIs('admin.news')" --}}
-            href="#">
+        <x-admin.nav-link href="{{ route('admin.news.index') }}" :isActive="request()->routeIs('admin.news.*')">
             <x-slot name="icon">
                 <x-icons.newspaper class="h-5 w-5" />
             </x-slot>

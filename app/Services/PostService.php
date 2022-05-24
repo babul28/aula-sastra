@@ -128,14 +128,14 @@ class PostService
      */
     protected function generateMeta(array $payload): array
     {
-        if (! Arr::has($payload, 'meta.title')) {
+        if (! Arr::get($payload, 'meta.title')) {
             $payload['meta']['title'] = $payload['title'];
         }
 
-        if (! Arr::has($payload, 'meta.description')) {
-            $payload['meta']['description'] = strip_tags($payload['description']);
+        if (! Arr::get($payload, 'meta.description')) {
+            $payload['meta']['description'] = strip_tags($payload['body']);
         }
 
-        return Arr::only($payload, ['meta.title', 'meta.description']);
+        return Arr::get($payload, 'meta');
     }
 }

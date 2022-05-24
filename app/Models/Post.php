@@ -61,6 +61,11 @@ class Post extends Model implements HasMedia
         return $builder->where('type', PostTypeEnum::ARTWORKS);
     }
 
+    public function scopeOnlyNews(Builder $builder): Builder
+    {
+        return $builder->where('type', PostTypeEnum::NEWS);
+    }
+
     public function getStatusDescAttribute(): string
     {
         return PostStatusEnum::STATUS[$this->status] ?? 'unknown';
