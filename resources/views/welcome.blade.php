@@ -74,7 +74,7 @@
                 <div>
                     <a href="{{ route('community') }}"
                         class="block p-1 w-32 h-32 rounded-xl font-semibold bg-gray-100 border border-gray-200 ring ring-gray-200 hover:shadow-2xl hover:shadow-cyan-100">
-                        <img src="{{ asset('assets/undraw_hey_email.svg') }}" alt="" class="h-full w-full">
+                        <img src="{{ asset('assets/undraw_business_chat.svg') }}" alt="" class="h-full w-full">
                     </a>
                     <p
                         class="mt-2 px-2 py-1 rounded bg-gray-50 bg-opacity-30 text-xs font-bold text-sky-800 tracking-wide text-center">
@@ -93,7 +93,7 @@
                 </div>
                 <input
                     class="w-full pl-8 pr-2 text-sm text-gray-700 placeholder-gray-600 bg-gray-100 border-0 rounded-md dark:placeholder-gray-500 dark:focus:shadow-outline-gray dark:focus:placeholder-gray-600 dark:bg-gray-700 dark:text-gray-200 focus:placeholder-gray-500 focus:bg-white focus:border-sky-300 focus:outline-none focus:shadow-outline-sky form-input"
-                    type="text" placeholder="Search for ..." aria-label="Search" />
+                    type="text" placeholder="Cari ..." aria-label="Search" />
             </div>
 
         </div>
