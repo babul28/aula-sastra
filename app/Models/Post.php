@@ -66,6 +66,11 @@ class Post extends Model implements HasMedia
         return $builder->where('type', PostTypeEnum::NEWS);
     }
 
+    public function scopeOnlyPublished(Builder $builder): Builder
+    {
+        return $builder->where('status', PostStatusEnum::PUBLISHED);
+    }
+
     public function getStatusDescAttribute(): string
     {
         return PostStatusEnum::STATUS[$this->status] ?? 'unknown';
@@ -74,6 +79,11 @@ class Post extends Model implements HasMedia
     public function getStatusColorAttribute(): string
     {
         return PostStatusEnum::STATUS_COLOR[$this->status] ?? 'unknown';
+    }
+
+    public function getTypeColorAttribute(): string
+    {
+        return PostTypeEnum::STATUS_COLOR[$this->type] ?? 'unknown';
     }
 
     public function isPublished(): bool
