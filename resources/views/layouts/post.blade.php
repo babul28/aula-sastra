@@ -29,7 +29,7 @@
             @endif
             <div class="relative z-10 max-w-7xl mx-auto py-8 flex justify-center items-center h-[19rem]">
                 <div class="absolute top-10 left-0">
-                    <a href="{{ url()->previous() === url()->current() ? route('home') : url()->previous() }}"
+                    <a href="{{ count(Request::segments()) === 1 ? route('home') : '/' . Request::segments()[0] }}"
                         class="text-white">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 inline-block mr-2" fill="none"
                             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
