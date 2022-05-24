@@ -25,6 +25,9 @@ class PostService
                 'user_id' => Auth::id(),
                 'status' => PostStatusEnum::getValue($payload['status']),
                 'meta' => $this->generateMeta($payload),
+                'published_at' => PostStatusEnum::getValue($payload['status']) === PostStatusEnum::PUBLISHED
+                    ? Carbon::now()
+                    : null,
             ]
         );
 
