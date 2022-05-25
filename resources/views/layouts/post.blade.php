@@ -20,12 +20,14 @@
 
 <body>
     <div class="flex flex-col min-h-screen bg-gray-50">
-        <div class="relative px-4 min-h-[25rem] bg-gradient-to-b from-blue-700 to-cyan-500">
+        <div class="relative px-4 min-h-[25rem]">
             @if($featuredImage)
             <div class="absolute bg-cover inset-0" style="background-image: url('{{ $featuredImage }}')">
             </div>
-            <div class="absolute bg-gradient-to-b from-blue-700 to-cyan-500 opacity-80 inset-0">
+            <div class="absolute bg-gradient-to-b from-red-700 to-gray-50 opacity-80 inset-0">
             </div>
+            @else
+            <div class="absolute bg-gradient-to-b from-red-700 to-gray-50 inset-0"></div>
             @endif
             <div class="relative z-10 max-w-7xl mx-auto py-8 flex justify-center items-center h-[19rem]">
                 <div class="absolute top-10 left-0">
