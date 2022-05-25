@@ -70,7 +70,7 @@
                 </tr>
                 @empty
                 <tr>
-                    <td colspan="5" class="px-4 py-20">
+                    <td colspan="6" class="px-4 py-20">
                         <div class="min-h-[4rme] flex flex-col justify-center items-center">
                             <img src="{{ asset('assets/undraw_blank_canvas.svg') }}" alt="" class="w-80">
                             <p class="text-gray-700 mt-4">Upps, There is nothing artwork posts yet!</p>
