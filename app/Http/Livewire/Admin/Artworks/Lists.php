@@ -51,6 +51,7 @@ class Lists extends Component
     public function getArtworksProperty()
     {
         return Post::query()
+                ->with(['category:id,name'])
                 ->onlyArtworks()
                 ->withTrashed()
                 ->when($this->search, fn ($q) => $q->where('title', 'like', "%{$this->search}%"))

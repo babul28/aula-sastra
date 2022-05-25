@@ -55,6 +55,8 @@
                         <x-input-error for="status" />
                     </div>
 
+                    <livewire:admin.artworks.category-field />
+
                     <div x-data="{ featureImageName: '', featureImagePreview: '' }" class="mb-5">
                         <x-label for="status" class="mb-2">Featured Image</x-label>
                         <div @click="$refs.file.click()"

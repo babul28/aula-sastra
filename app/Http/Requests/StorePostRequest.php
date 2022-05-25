@@ -26,6 +26,8 @@ class StorePostRequest extends FormRequest
             'meta.title' => ['nullable', 'string', 'max:200'],
             'meta.description' => ['nullable', 'string'],
 
+            'category_id' => ['nullable', 'exists:categories,id'],
+
             'featured_image' => ['required', 'image'],
         ];
     }

@@ -57,6 +57,8 @@
                         <x-input-error for="status" />
                     </div>
 
+                    <livewire:admin.artworks.category-field :categoryId="$artwork->category_id" />
+
                     <div x-data="{ featureImageName: `{{ $artwork->getFirstMedia('featured_image')->name }}`, featureImagePreview: `{{ $artwork->getFirstMedia('featured_image')->getUrl('thumbnail') }}` }"
                         class="mb-5">
                         <x-label for="status" class="mb-2">Featured Image</x-label>

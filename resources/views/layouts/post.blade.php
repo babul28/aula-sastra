@@ -14,6 +14,10 @@
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
+    @livewireStyles
+
+    @livewireScripts
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
@@ -24,12 +28,14 @@
             @if($featuredImage)
             <div class="absolute bg-cover inset-0" style="background-image: url('{{ $featuredImage }}')">
             </div>
+
             <div class="absolute bg-gradient-to-b from-red-700 to-gray-50 opacity-80 inset-0">
             </div>
             @else
             <div class="absolute bg-gradient-to-b from-red-700 to-gray-50 inset-0"></div>
             @endif
-            <div class="relative z-10 max-w-7xl mx-auto py-8 flex justify-center items-center h-[19rem]">
+            <div
+                class="relative z-10 max-w-7xl mx-auto py-8 flex justify-center items-center h-[19rem] overflow-hidden">
                 <div class="absolute top-10 left-0">
                     <a href="{{ count(Request::segments()) === 1 ? route('home') : '/' . Request::segments()[0] }}"
                         class="text-white flex items-center">
@@ -40,15 +46,19 @@
                         Kembali
                     </a>
                 </div>
-                <h1 class="text-5xl text-white font-bold tracking-widest uppercase text-center overflow-hidden">
+                <h1 class="line-clamp-3 text-5xl text-white font-bold tracking-widest uppercase text-center">
                     {{ $header }}
                 </h1>
             </div>
         </div>
 
         <div class="relative flex-1 px-4 xl:px-0 w-full max-w-7xl mx-auto">
-            <div class="p-6 md:p-8 lg:p-16 bg-gray-50 -mt-24 rounded-t-xl shadow">
-                {{ $slot }}
+            <div class="-mt-24">
+                {{ $search ?? '' }}
+
+                <div class="p-6 md:p-8 lg:p-16 bg-gray-50 rounded-t-xl shadow">
+                    {{ $slot }}
+                </div>
             </div>
         </div>
     </div>
