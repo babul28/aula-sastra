@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html :class="{ 'dark': dark }" x-data="adminLayout" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html x-data="adminLayout" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="UTF-8" />
