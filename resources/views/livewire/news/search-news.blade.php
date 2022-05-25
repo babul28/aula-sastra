@@ -8,5 +8,5 @@
     </div>
     <input wire:model.debounce="search"
         class="w-full pl-12 pr-4 py-3 text-base text-gray-700 placeholder-gray-600 bg-gray-100 border-0 rounded-md focus:placeholder-gray-500 focus:bg-white focus:red-red-300 focus:outline-none focus:shadow-outline-red form-input"
-        type="search" placeholder="Cari Karya ..." name="search" aria-label="Search" />
+        type="search" placeholder="Cari Berita ..." name="search" aria-label="Search" />
 </div>
