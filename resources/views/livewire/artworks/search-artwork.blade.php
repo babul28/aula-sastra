@@ -7,6 +7,6 @@
         </svg>
     </div>
     <input wire:model.debounce="search"
-        class="w-full pl-12 pr-4 py-3 text-base text-gray-700 placeholder-gray-600 bg-gray-100 border-0 rounded-md dark:placeholder-gray-500 dark:focus:shadow-outline-gray dark:focus:placeholder-gray-600 dark:bg-gray-700 dark:text-gray-200 focus:placeholder-gray-500 focus:bg-white focus:red-red-300 focus:outline-none focus:shadow-outline-red form-input"
+        class="w-full pl-12 pr-4 py-3 text-base text-gray-700 placeholder-gray-600 bg-gray-100 border-0 rounded-md focus:placeholder-gray-500 focus:bg-white focus:red-red-300 focus:outline-none focus:shadow-outline-red form-input"
         type="search" placeholder="Cari Karya ..." name="search" aria-label="Search" />
 </div>

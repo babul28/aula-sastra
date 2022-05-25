@@ -1,7 +1,7 @@
 <x-admin-layout title="Dashboard">
     <!-- Remove everything INSIDE this div to a really blank page -->
     <div class="container px-6 mx-auto grid">
-        <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
+        <h2 class="my-6 text-2xl font-semibold text-gray-700">
             Dashboard
         </h2>
 
@@ -31,7 +31,7 @@
         </div>
 
         <div class="mt-6">
-            <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-200 mb-4">Latest Post</h3>
+            <h3 class="text-lg font-semibold text-gray-700 mb-4">Latest Post</h3>
 
             <livewire:admin.dashboard.latest-post-list />
         </div>

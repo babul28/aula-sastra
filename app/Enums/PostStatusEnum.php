@@ -17,9 +17,9 @@ class PostStatusEnum
     public const TRASHED = 2;
 
     public const STATUS_COLOR = [
-        'text-gray-700 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-100',
-        'text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100',
-        'text-red-700 bg-red-100 rounded-full dark:bg-red-700 dark:text-red-100',
+        'text-gray-700 bg-gray-100 rounded-full',
+        'text-green-700 bg-green-100 rounded-full',
+        'text-red-700 bg-red-100 rounded-full',
     ];
 
     public static function getValue(string $value): int
