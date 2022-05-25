@@ -2,8 +2,7 @@
     <div class="w-full overflow-x-auto">
         <table class="w-full whitespace-no-wrap">
             <thead>
-                <tr
-                    class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b bg-gray-50">
                     <th class="px-4 py-3">Title</th>
                     <th class="px-4 py-3">Slug</th>
                     <th class="px-4 py-3">Type</th>
@@ -11,9 +10,9 @@
                     <th class="px-4 py-3">Date</th>
                 </tr>
             </thead>
-            <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+            <tbody class="bg-white divide-y">
                 @forelse ($this->posts as $post)
-                <tr class="text-gray-700 dark:text-gray-400" wire:key="{{ $post->uuid }}">
+                <tr class="text-gray-700" wire:key="{{ $post->uuid }}">
                     <td class="px-4 py-3 text-sm">
                         {{ $post->title }}
                     </td>

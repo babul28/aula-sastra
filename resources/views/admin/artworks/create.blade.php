@@ -1,7 +1,7 @@
 <x-admin-layout name="Create Artwork">
     <div class="container px-6 mx-auto grid">
         <div class="flex my-6 align-items-center">
-            <h2 class="flex-1 text-2xl font-semibold text-gray-700 dark:text-gray-200">
+            <h2 class="flex-1 text-2xl font-semibold text-gray-700">
                 Create Artwork
             </h2>
             <div>

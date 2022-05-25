@@ -1,6 +1,6 @@
-<div class="pb-4text-gray-500 dark:text-gray-400">
+<div class="pb-4text-gray-500">
     <div class="h-[68px] py-4 px-6 flex items-center">
-        <a class="text-lg font-bold text-gray-800 dark:text-gray-200" href="#">
+        <a class="text-lg font-bold text-gray-800" href="#">
             {{ config('app.name') }}
         </a>
     </div>
@@ -33,7 +33,7 @@
 
         {{-- <li x-data="multipleNavLink" class="relative px-6 py-3">
             <button
-                class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800"
                 @click="togglePagesMenu" aria-haspopup="true">
                 <span class="inline-flex items-center">
                     <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round"
@@ -64,25 +64,25 @@
                 x-transition:enter-start="opacity-25 max-h-0" x-transition:enter-end="opacity-100 max-h-xl"
                 x-transition:leave="transition-all ease-in-out duration-300"
                 x-transition:leave-start="opacity-100 max-h-xl" x-transition:leave-end="opacity-0 max-h-0"
-                class="p-2 mt-2 space-y-2 overflow-hidden text-sm font-medium text-gray-500 rounded-md shadow-inner bg-gray-50 dark:text-gray-400 dark:bg-gray-900"
+                class="p-2 mt-2 space-y-2 overflow-hidden text-sm font-medium text-gray-500 rounded-md shadow-inner bg-gray-50"
                 aria-label="submenu" style="display: none">
-                <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
+                <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800">
                     <a class="w-full" href="./login.html">Login</a>
                 </li>
-                <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
+                <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800">
                     <a class="w-full" href="./create-account.html">
                         Create account
                     </a>
                 </li>
-                <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
+                <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800">
                     <a class="w-full" href="./forgot-password.html">
                         Forgot password
                     </a>
                 </li>
-                <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
+                <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800">
                     <a class="w-full" href="./404.html">404</a>
                 </li>
-                <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
+                <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800">
                     <a class="w-full" href="./blank.html">Blank</a>
                 </li>
             </ul>

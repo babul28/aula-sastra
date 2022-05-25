@@ -1,9 +1,8 @@
 @props(['href', 'isActive'])
 
 @php
-$baseClass = 'inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800
-dark:hover:text-gray-200';
-$activeClass = $baseClass . ' text-gray-800 dark:text-gray-100';
+$baseClass = 'inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800';
+$activeClass = $baseClass . ' text-gray-800';
 
 $class = ($isActive ?? false) ? $activeClass : $baseClass;
 @endphp

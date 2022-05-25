@@ -2,8 +2,7 @@
     <div class="w-full overflow-x-auto">
         <table class="w-full whitespace-no-wrap">
             <thead>
-                <tr
-                    class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b bg-gray-50">
                     <th class="px-4 py-3">Title</th>
                     <th class="px-4 py-3">Slug</th>
                     <th class="px-4 py-3">Status</th>
@@ -11,9 +10,9 @@
                     <th class="px-4 py-3">Actions</th>
                 </tr>
             </thead>
-            <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+            <tbody class="bg-white divide-y">
                 @forelse ($this->news as $item)
-                <tr class="text-gray-700 dark:text-gray-400" wire:key="{{ $item->uuid }}">
+                <tr class="text-gray-700" wire:key="{{ $item->uuid }}">
                     <td class="px-4 py-3 text-sm">
                         {{ $item->title }}
                     </td>
@@ -32,7 +31,7 @@
                         <div class="flex items-center space-x-4 text-sm">
                             @unless($item->isPublished())
                             <button wire:click="publishNews('{{ $item->uuid }}')"
-                                class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 border border-transparent hover:border-purple-200 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-purple"
+                                class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 border border-transparent hover:border-purple-200 rounded-lg focus:outline-none focus:shadow-outline-purple"
                                 aria-label="Publish" wire:key="{{ $item->uuid . 'publish' }}">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor" stroke-width="2">
@@ -42,7 +41,7 @@
                             </button>
                             @endunless
                             <a href="{{ route('admin.news.edit', $item->uuid) }}"
-                                class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 border border-transparent hover:border-purple-200 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-purple"
+                                class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 border border-transparent hover:border-purple-200 rounded-lg focus:outline-none focus:shadow-outline-purple"
                                 aria-label="Edit">
                                 <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
                                     <path
@@ -52,7 +51,7 @@
                             </a>
                             @unless($item->isTrashed())
                             <button wire:click="deleteNews('{{ $item->uuid }}')"
-                                class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 border border-transparent hover:border-purple-200 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-purple"
+                                class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 border border-transparent hover:border-purple-200 rounded-lg focus:outline-none focus:shadow-outline-purple"
                                 aria-label="Delete" wire:key="{{ $item->uuid . 'delete' }}">
                                 <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd"
