@@ -15,7 +15,8 @@ class DashboardController extends Controller
             ->selectRaw('count(*) as count, type')
             ->onlyPublished()
             ->groupBy('type')
-            ->get();
+            ->get()
+            ->mapWithKeys(fn (Post $p) => [$p->type => $p->count]);
 
         return view('admin.dashboard', compact('postsAnalytics'));
     }

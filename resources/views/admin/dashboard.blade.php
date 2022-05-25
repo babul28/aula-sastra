@@ -7,13 +7,13 @@
 
         <!-- Cards -->
         <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            <x-admin.cards.analytic title="Total News" :count="$postsAnalytics[0]->count" color="orange">
+            <x-admin.cards.analytic title="Total News" :count="$postsAnalytics['news'] ?? 0" color="orange">
                 <x-slot name="icon">
                     <x-icons.newspaper class="h-5 w-5" />
                 </x-slot>
             </x-admin.cards.analytic>
 
-            <x-admin.cards.analytic title="Total Artworks" :count="$postsAnalytics[1]->count" color="green">
+            <x-admin.cards.analytic title="Total Artworks" :count="$postsAnalytics['artworks'] ?? 0" color="green">
                 <x-slot name="icon">
                     <x-icons.sparkles class="h-5 w-5" />
                 </x-slot>
